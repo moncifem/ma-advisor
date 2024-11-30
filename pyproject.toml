@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ma-advisor"
+version = "0.1.0"
+description = "The m&a advisor tool, a comprehensive agent for analysing and decision making"
+authors = ["Moncif"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.3.9"
+langchain-openai = "^0.2.10"
+langgraph = "^0.2.53"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
