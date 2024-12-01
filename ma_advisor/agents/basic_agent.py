@@ -1,7 +1,7 @@
 from typing import TypedDict, Annotated
 from langgraph.graph import add_messages, StateGraph, START, END
 from langchain_core.messages import AnyMessage, HumanMessage
-from ma_advisor.utils.model import gpt_35_turbo
+from utils.model import gpt_35_turbo
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -29,7 +29,7 @@ def query_basic_agent(query: str):
     Args:
         str: Takes a string as input, transforms it into a human message and invokes the graph
     """
-    return graph.invoke({"messages": [HumanMessage(content=query)]})
+    return graph.invoke({"messages": [HumanMessage(content=query)]})["messages"][-1].content
 
 # try:
 #     with open("basic_agent.png","wb") as pic:
